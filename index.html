@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PUBG Marketplace</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <h1>PUBG Account Marketplace</h1>
+        <input type="text" id="searchBar" placeholder="Search accounts..." onkeyup="filterAccounts()">
+    </nav>
+
+    <!-- Account Listings -->
+    <div class="account-list" id="accountList">
+        <!-- PUBG Accounts (Dynamic Listings) -->
+        <div class="account-card" onclick="showDetails('PlayerOne', 'Ace', '3000', '450', '$120', 'images/account1.jpg')">
+            <img src="images/account1.jpg" alt="Account Image">
+            <h3>PlayerOne</h3>
+            <p>Rank: Ace</p>
+            <p>Kills: 3000</p>
+            <p>Price: $120</p>
+        </div>
+
+        <div class="account-card" onclick="showDetails('ProKiller', 'Conqueror', '5000', '700', '$200', 'images/account2.jpg')">
+            <img src="images/account2.jpg" alt="Account Image">
+            <h3>ProKiller</h3>
+            <p>Rank: Conqueror</p>
+            <p>Kills: 5000</p>
+            <p>Price: $200</p>
+        </div>
+    </div>
+
+    <!-- Account Details Popup -->
+    <div id="accountModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img id="modalImg" src="" alt="Account Image">
+            <h2 id="modalName"></h2>
+            <p id="modalRank"></p>
+            <p id="modalKills"></p>
+            <p id="modalMatches"></p>
+            <p id="modalPrice"></p>
+            <button class="buy-btn">Buy Now</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
