@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PUBG Fan Page</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- GSAP Animation Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</head>
+<body>
+
+    <!-- PUBG Logo -->
+    <div class="logo-container">
+        <img src="images/pubg-logo.png" alt="PUBG Logo" class="logo">
+    </div>
+
+    <h1>Welcome to PUBG Battle Hub</h1>
+
+    <!-- Guns Section -->
+    <h2>Popular PUBG Guns</h2>
+    <div class="guns">
+        <div class="gun"><img src="images/ak47.png" alt="AK-47"></div>
+        <div class="gun"><img src="images/m416.png" alt="M416"></div>
+        <div class="gun"><img src="images/awm.png" alt="AWM Sniper"></div>
+    </div>
+
+    <!-- Add Account Form -->
+    <h2>Add Your PUBG Account</h2>
+    <div class="add-account">
+        <input type="text" id="username" placeholder="Enter Username">
+        <input type="text" id="rank" placeholder="Enter Rank">
+        <input type="text" id="kills" placeholder="Total Kills">
+        <input type="text" id="matches" placeholder="Total Matches">
+        <button onclick="addAccount()">Add Account</button>
+    </div>
+
+    <!-- Leaderboard -->
+    <h2>Leaderboard</h2>
+    <div class="accounts" id="accounts"></div>
+
+    <!-- Account Details Modal -->
+    <div class="modal" id="accountModal">
+        <h2 id="modalName"></h2>
+        <p id="modalRank"></p>
+        <p id="modalKills"></p>
+        <p id="modalMatches"></p>
+        <button onclick="closeModal()">Close</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
